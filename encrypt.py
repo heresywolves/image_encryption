@@ -7,10 +7,11 @@ def encrypt(mode):
         print('')
         path = input(r'Enter path of Image : ')
         print('')
+        print('Note: Max lenght of a key is 2 digits')
         try:
             key = int(input('Enter Key for encryption/decryption of Image : '))
         except:
-            print('\nKey must be a number. Please try again. Example: 5264')
+            print('\nKey must be a number. Please try again. Example: 52')
             return
         print('\nThe path of file : ', path)
         print('\nKey for encryption : ', key)
@@ -39,6 +40,7 @@ def encrypt(mode):
         print('')
         folder_path = input(r'Enter path of folder : ')
         print('')
+        print('Note: Max lenght of a key is 2 digits')
         try:
             key = int(input('Enter Key for encryption/decryption : '))
         except:
