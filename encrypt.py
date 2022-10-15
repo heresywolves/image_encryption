@@ -28,18 +28,16 @@ def prepare_key(key, encrypt_or_decrypt):
 
 def check_path(path):
 
+    # Checks if the entered path is a file or a folder path ===================
     if '.' in path:
         return 'file'
     else:
         return 'folder'
 
 
-def encrypt_file():
-    pass
-
-
 def encrypt(encrypt_or_decrypt):
 
+    # Asking for the user input and troubleshooting ===========================
     print('')
     path = input(r'Enter path of Image or Folder : ')
     print('')
@@ -64,6 +62,7 @@ def encrypt(encrypt_or_decrypt):
     print('\nThe path of file : ', path)
     print('\nKey for encryption : ', key)
 
+    # Main encryption/decryption functions =====================================
     if mode == 'file':
 
         pass_count = 1
@@ -125,6 +124,7 @@ def encrypt(encrypt_or_decrypt):
 
                 img_path = ''
                 count += 1
+            pass_count += 1
 
 
 if __name__ == '__main__':
@@ -132,3 +132,5 @@ if __name__ == '__main__':
     encrypt_or_decrypt = input('Encrypt or Decrypt? [enc/dec]: ')
 
     encrypt(encrypt_or_decrypt)
+
+    print('\nALL DONE!')
